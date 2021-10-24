@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  position:relative;
+  width: 100%;
+  min-height: 100vh; 
+  overflow: hidden; 
+  display: flex;
+  
+}
+.container:before {
+  content: "";
+  position: absolute;
+  height: 1500px;
+  width: 1500px;
+  top: -10%;
+  right: 48%;
+  transform: translateY(-49%);
+  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+  transition: 1.8s ease-in-out;
+  border-radius: 50%;
+}
+ 
+ form {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  flex-direction: column;
+   
+  overflow: hidden;
+} 
+ .container .signin{
+  /* position: absolute;
+  top: 10px;
+  right: 15%;
+  transform: translate(50px, 50px);
+  z-index: 3; */
+  position: absolute;
+  top: calc(50% - 220px);
+  right: 15%;
+  transform: translate(50px, 50px);
+  z-index: 3;
+
+}
+
+/* .container .signin {
+  border: 1px solid blue;
+  position: absolute;
+  right: 10%;
+  transform: translate(50px, 50px);
+  z-index: 3;
+  transform: scale(1.6);
+  height: 100%;
+  display: flex;
+}  */
+.container .signin .input-field .user {
+  position: absolute;
+  line-height: 55px;
+  color: #acacac;
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: #444;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.container form input {
+    margin-top: 6px;
+    min-width: 18em;
+    width:100%;
+    height: 45px;
+    padding: 0px 10px;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    background-color: #f3f3f3; 
+    border: 0;
+    border-radius: 4px;
+    margin-bottom: 31px;
+    transition: all 250ms ease-in-out;
+    border-radius: 55px;
+
+}
+.container form input:focus {
+  outline: none;
+  box-shadow: 0px 0px 12px 0.8px #3474dbb2;
+}
+.input-field input::placeholder {
+  color: rgb(190, 189, 189);
+  font-weight: 500;
+}
+
+.social-text {
+  padding: 0.7rem 0;
+  font-size: 1rem;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6px 5px;
+  color: #4481eb;
+  border: none;
+  border: 1px solid rgb(180, 180, 180);
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.social-icon:nth-child(2){
+  color: rgb(201, 203, 211);
+}
+.social-icon:nth-child(3){
+  color: rgb(64, 159, 223);
+}
+.social-icon:nth-child(4){
+  color: rgb(133, 126, 126);
+}
+
+.social-icon:hover {
+  color: #437fe7;
+  
+}
+
+.container form .button{
+  text-align: center; 
+}
+.button button {
+  width: 150px;
+  background-color: #389bec;
+  border: none;
+  outline: none;
+  height: 43px;
+  border-radius: 47px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.button button:hover {
+  background-color: #1c84e6;
+}
+.social-text{
+  text-align: center;
+}
+
+.container .photos-container{
+ position: absolute;
+  z-index: 2;
+  width: 100%;
+  
+}
+.container .photos-container .photos {
+ position: absolute !important;
+  left: 20px;
+  transform: translate(50px, 50px);
+
+}
+.container .photos-container .content{
+  position: relative;
+}
+.container .photos-container .content h3{
+  color: white;
+  transform: translate(100px);
+ 
+}
+.container .photos-container .content p{
+  color: white;
+  line-height: 1.4;
+  margin-top: 30px;
+  font-weight: 600;
+}
+.photos-container .my-image{
+   width: 100%;
+}
+.photos-container .image{
+   width: 50%;
+  margin-top: 50px;
+} 
+
+
+/* responsave */
+@media (max-width: 1593px) {
+  /* .container {
+     transform: translate(20px,80px); 
+   
+   
+} */
+/* .container .signin {
+  border: 1px solid blue;
+  position: absolute;
+  right: 10%;
+  transform: translate(50px, 50px);
+  z-index: 3;
+  transform: scale(1.6);
+  height: 100%;
+  display: flex;
+}  */
+}
+@media (max-width: 1200px)  
+{
+  .container .signin{
+    right: 10%;
+
+  }
+}
+@media (max-width: 960px) {
+  .container .photos-container .content{
+    margin-left: -15px;
+  }
+}
+
+@media (max-width: 880px) {
+  .container .signin {
+    position: absolute;
+    right: 0;
+    z-index: 3;
+    transform: scale(1.3);
+    display: block;
+    width: 100%;
+    top: 45%;
+}
+  .container{
+     min-height: 800px;
+     height: 100vh;  
+     /* max-width: 1300px; */
+  }
+  /* .form-container{
+    width: 100%; 
+ } */
+  .container .signin{
+    /* overflow: hidden; */
+    width: 100%;
+    top: 30%;
+    right: 20px;
+    transform: translate(20px, 50px);
+    z-index: 3;  
+  }
+   .photos-container{
+     z-index: 10;
+     left: 10%;
+     top: -5%;
+   }
+
+   .container .photos-container .photos .content{
+    position: relative;
+    left: -25px;
+   }
+   
+   .container .photos-container .content h3{
+    transform: translate(50px);
+
+  }
+  .container .photos-container .content p{
+    margin-top: 30px;
+    font-weight: 600;
+    transform: translate(-10px);
+  }
+   .container .photos-container .photos {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+   }
+   .container .photos-container .my-image .image{
+     width: 230px;
+     margin-right: 100px;
+   }
+   .container:before {
+    width: 1500px;
+    height: 1500px;
+    transform: translateX(-40%);
+    left: 20%;
+    bottom: 66%;
+    right: initial;
+    top: initial;
+  }
+}
+@media (max-width: 550px){
+
+  .container .photos-container .photos{
+    margin-left: -50px;
+  }
+
+  .container .photos-container .content{
+    margin-bottom: -50px;
+    
+  }
+  .container .photos-container .content h3{
+    transform: translate(30px);
+
+  }
+  .container .photos-container .content p{
+    margin-top: 20px;
+    font-size: 12px;
+    transform: translate(13px);
+  }
+  .container .photos-container .my-image .image{
+    width: 200px;
+  }
+}
+@media (max-width: 470px){
+  .container .photos-container .my-image .image{
+    width: 150px;
+  }
+}
+@media (max-width: 360px){
+  .container .photos-container .my-image .image{
+    width: 130px;
+  }
+  .container .photos-container .content h3{
+    font-size: 17px;
+
+  }
+}
+
+
